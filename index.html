@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+<title> Even/Odd  App By Manish</title>
+<style>
+	* {font-size: 50px;}
+	body {background-color: lightblue;}
+</style>
+
+<script>
+
+	function find()
+	{
+		event.preventDefault();
+		let num = document.getElementById("num");
+		let ans = document.getElementById("ans");
+		if (num.value == "")
+		{
+			alert("Input is empty");
+			ans.innerHTML = "";
+			num.focus();
+			return;
+
+		}
+		
+		let n = parseInt(num.value);
+		let msg = "";
+		if (n % 2 == 0)
+		msg = "Even";
+		else
+		msg="Odd"
+		ans.innerHTML = msg;
+
+		
+	}
+
+</script>
+
+</head>
+
+<body>
+<center>
+
+<h1> Even odd Finder </h1>
+<form onsubmit= "find()">
+	<input type= "number" placeholder="Enter an integer" id="num"/>
+	<br><br>
+	<input type= "Submit" value="Find Even or Odd"/>
+</form>
+	<h1 id= "ans"/>
+</center>
+</body>
+
+
+</html>
